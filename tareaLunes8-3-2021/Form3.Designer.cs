@@ -47,12 +47,13 @@ namespace tareaLunes8_3_2021
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(581, 338);
+            this.button1.Location = new System.Drawing.Point(712, 314);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 43);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "agregar alquiler";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 

@@ -20,7 +20,7 @@ namespace tareaLunes8_3_2021
         {
             InitializeComponent();
         }
-        void agregar()
+        void agre()
         {
             vehiculos a = new vehiculos();
             a.Placa1 = textBox1.Text;
@@ -29,7 +29,7 @@ namespace tareaLunes8_3_2021
             a.Color = textBox4.Text;
             a.Preciki = Convert.ToDouble(textBox5.Text);
         }
-        void escribirv()
+        void escve()
         {
             FileStream stream = new FileStream("vehiculos.txt", FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter write = new StreamWriter(stream);
@@ -43,7 +43,7 @@ namespace tareaLunes8_3_2021
             }
             write.Close();
         }
-        void leerv()
+        void analizarv()
         {
             OpenFileDialog op = new OpenFileDialog();
             string filename = "vehiculos.txt";
@@ -83,7 +83,7 @@ namespace tareaLunes8_3_2021
         {
             if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text) && !string.IsNullOrEmpty(textBox5.Text))
             {
-                agregar();
+                agre();
                 repetidos();
                 vehiculos f = new vehiculos();
                 if (h)
@@ -105,7 +105,7 @@ namespace tareaLunes8_3_2021
                     textBox3.Clear();
                     textBox4.Clear();
                     textBox5.Clear();
-                    escribirv();
+                    escve();
                 }
             }
             else
@@ -119,13 +119,19 @@ namespace tareaLunes8_3_2021
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            leerv();
+            analizarv();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 f2 = new Form2();
             f2.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 }
