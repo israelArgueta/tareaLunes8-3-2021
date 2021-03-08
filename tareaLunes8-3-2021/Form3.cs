@@ -41,7 +41,7 @@ namespace tareaLunes8_3_2021
             reader.Close();
 
             comboBox1.DisplayMember = "NIT";
-            comboBox1.ValueMember = "Nombre";
+            comboBox1.ValueMember = "NIT";
 
             comboBox1.DataSource = null;
             comboBox1.DataSource = per;
@@ -50,7 +50,7 @@ namespace tareaLunes8_3_2021
         void leerpla()
         {
             OpenFileDialog op = new OpenFileDialog();
-            string filename = "automovil.txt";
+            string filename = "vehiculos.txt";
             FileStream st = new FileStream(filename, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(st);
             while (reader.Peek() > -1)
@@ -66,8 +66,8 @@ namespace tareaLunes8_3_2021
             }
             reader.Close();
 
-            comboBox2.DisplayMember = "Placa";
-            comboBox2.ValueMember = "Modelo";
+            comboBox2.DisplayMember = "Placa1";
+            comboBox2.ValueMember = "Placa1";
 
             comboBox2.DataSource = null;
             comboBox2.DataSource = au;
